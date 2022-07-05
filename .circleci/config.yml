@@ -18,7 +18,7 @@ jobs:
             - "~/toolchains/"
       - run:
           name: Compile firmware
-          command: make -f release.Makefile -k all
+          command: cd src && make TARGET=STM32F103
           environment:
             PREFIX: "~/toolchains/gcc-arm-embedded/bin/arm-none-eabi"
       - store_artifacts:
